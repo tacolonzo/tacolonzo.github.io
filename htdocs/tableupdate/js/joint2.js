@@ -44,8 +44,8 @@ jQuery(function ($){
 		$editorTitle = $('#editor-title'),
 		// the below initializes FooTable and returns the created instance for later use
 		ft = FooTable.init('#showcase-example-1', {
-			columns: $.ajax("htdocs/tableupdate/content/columns.json", {dataType:'json', timeout: 3000}), //no cache for collumn because it shouldn't change
-			rows: $.ajax("htdocs/tableupdate/content/rows.json", {cache: false, dataType:'json', timeout: 3000}),//this cache line is used so that the website wont keep the rows so it stays updated
+			columns: $.ajax("content/columns.json", {dataType:'json', timeout: 3000}), //no cache for collumn because it shouldn't change
+			rows: $.ajax("content/rows.json", {cache: false, dataType:'json', timeout: 3000}),//this cache line is used so that the website wont keep the rows so it stays updated
 			editing: {
 				enabled: true,
 				addRow: function(){
