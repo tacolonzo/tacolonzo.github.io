@@ -1,0 +1,206 @@
+<!DOCTYPE HTML>
+<!-- Website Template by freewebsitetemplates.com -->
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>The Recommendation Table</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="../FooTableBS/css/footable.bootstrap.min.css"/> <!--(this might change for you, find where this file is and put the correct directory, if it is in the same folder as the html file you don’t have to put the c:/xamp stuff.  -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.js"></script>
+<script type="text/javascript" src="../FooTableBS/js/footable.js"></script> <!--Then we add the FooTable JavaScript that we downloaded earlier   -->
+<script type="text/javascript" src="js/joint2.js"></script> <!-- I actually created a new js (called Joint.Js) and linked it into my HTML using the same method as above -->
+<link rel="stylesheet" href="../mainupdate/css/style.css" type="text/css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/css/bootstrap-datetimepicker.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js"></script>
+<style>
+	* {
+  -webkit-box-sizing: content-box;
+     -moz-box-sizing: content-box;
+          box-sizing: content-box;
+}
+
+	</style>
+</head>
+<body>
+	<div id="background">
+		<div id="header">
+			<div>
+				<div>
+					<a href="../mainupdate/index.html" class="logo"><img src="../mainupdate/images/logo.png" alt=""></a>
+					<ul>
+						<li>
+							<a href="../mainupdate/" id="menu1">home</a>
+						</li>
+						<li class="selected">
+							<a href="../tableupdate/" id="menu2">table</a>
+						</li>
+						<li>
+							<a href="../mainupdate/games.html" id="menu3">subscribe</a>
+						</li>
+						<li>
+							<a href="../mainupdate/about.html" id="menu4">about</a>
+						</li>
+						<li>
+							<a href="../Forum/" id="menu5">forum</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div id="body">
+			<div>
+				<div>
+					<div class="media">
+						<div>
+							<div class="article">
+								<h3>This is the Table</h3>
+								<!-- Table Markup Copy the markup from here: http://fooplugins.github.io/FooTable/docs/examples/component/showcase.html  -->
+								<table id="showcase-example-1" class="table" data-show-toggle="true" data-toggle-column="last" data-paging="false" data-filtering="true" data-sorting="true">
+											</table>
+	<script>
+
+	</script>
+								<!-- Editing Modal Markup -->
+								<div class="modal fade" id="editor-modal" tabindex="-1" role="dialog" aria-labelledby="editor-title">
+									<style scoped="true">
+										/* provides a red astrix to denote required fields - this should be included in common stylesheet */
+										.form-group.required .control-label:after {
+											content:"*";
+											color:red;
+											margin-left: 4px;
+										}
+									</style>
+									<div class="modal-dialog" role="document">
+										<form class="modal-content form-horizontal" id="editor">
+											<div class="modal-header">
+												<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+												<h4 class="modal-title" id="editor-title">Add Row</h4>
+											</div>
+											<div class="modal-body">
+												<input type="number" id="id" name="id" class="hidden"/>
+												<input type="number" id="user" name="user" class="hidden"/>
+												<input type="html" id="updown" name="updown" class="hidden"/>
+												<div class="form-group required">
+													<label for="Name" class="col-sm-3 control-label">Name</label>
+													<div class="col-sm-9">
+														<input type="text" class="form-control" id="Name" name="Name" placeholder="Name" required="true"/>
+													</div>
+												</div>
+												<div class="form-group required">
+													<label for="showTitle" class="col-sm-3 control-label">Show Title</label>
+													<div class="col-sm-9">
+														<input type="text" class="form-control" id="showTitle" name="showTitle" placeholder="Show Title" required="true"/>
+													</div>
+												</div>
+												<div class="form-group required">
+													<label for="recommendedOn" class="col-sm-3 control-label">Recommended On</label>
+													<div class="col-sm-9">
+														<input type="text" class="form-control" id="recommendedOn" name="recommendedOn" placeholder="MM/DD/YYYY HH:MM AM/PM" required="true"/>
+													</div>
+													 <script type="text/javascript">
+														$(document).ready(function () {
+															$('#recommendedOn').datetimepicker({
+															sideBySide: true,
+															useCurrent: true	
+															
+															});
+														});
+													</script>
+												</div>
+												<div class="form-group">
+													<label for="rating" class="col-sm-3 control-label">Rating</label>
+													<div class="col-sm-9">
+														<select class="form-control" id="rating" name="rating">
+															<option value="5.Must Watch">5.Must Watch</option>
+															<option value="4.Great Show">4.Great Show</option>
+															<option value="3. Good Show">3.Good Show</option>
+															<option value="2. Average">2.Average</option>
+															<option value="1. Lame">1.Lame</option>
+														</select>
+													</div>
+												</div>
+												<div class="form-group">
+													<label for="types" class="col-sm-3 control-label">Type</label>
+													<div class="col-sm-9">
+														<select class="form-control" id="types" name="types">
+															<option value="Subbed Anime">Subbed Anime</option>
+															<option value="Sub/Dub Anime">Sub/Dub Anime</option>
+															<option value="Movie">Movie</option>
+															<option value="TV Show">TV Show</option>
+															<option value="Other">Other</option>
+														</select>
+													</div>
+												</div>
+												<div class="form-group">
+													<label for="options" class="col-sm-3 control-label">Complete/ Ongoing</label>
+													<div class="col-sm-9">
+														<select class="form-control" id="options" name="options">
+															<option value="Completed">Completed</option>
+															<option value="Ongoing">Ongoing</option>
+															<option value="N/A">N/A</option>
+														</select>
+													</div>
+												</div>
+												<div class="form-group">
+													<label for="comments" class="col-sm-3 control-label">Comments</label>
+													<div class="col-sm-9">
+														<input type="text" class="form-control" id="comments" name="comments" placeholder="Comments"/>
+													</div>
+												</div>
+											</div>
+											<div class="modal-footer">
+												<button type="submit" class="btn btn-primary">Save changes</button>
+												<button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+											</div>
+										</form>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="article">
+							<h3>this is just a place holder</h3>
+							<ul>
+								<li>
+									<a href="#" class="figure"><img src="../mainupdate/images/media2.jpg" alt=""></a>
+									<p>
+										This website template has been designed by <a href="http://www.freewebsitetemplates.com/">Free Website Templates</a> for you, for free. You can replace all this text with your own text. You can remove any link to our website from this website template, you're free to use this website template.
+									</p>
+								</li>
+								<li>
+									<a href="#" class="figure"><img src="../mainupdate/images/media3.jpg" alt=""></a>
+									<p>
+										If you're having problems editing this website template, then don't hesitate to ask for help on the <a href="http://www.freewebsitetemplates.com/forums/">Forum</a>.
+									</p>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="footer">
+			<div>
+				<ul>
+					<li id="facebook">
+						<a href="http://freewebsitetemplates.com/go/facebook/">facebook</a>
+					</li>
+					<li id="twitter">
+						<a href="http://freewebsitetemplates.com/go/twitter/">twitter</a>
+					</li>
+					<li id="googleplus">
+						<a href="http://freewebsitetemplates.com/go/googleplus/">googleplus</a>
+					</li>
+				</ul>
+				<p>
+					@ copyright 2012. all rights reserved.
+				</p>
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>
